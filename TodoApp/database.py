@@ -20,4 +20,4 @@ engine = create_engine(
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 # Create a base class for defining database models (tables)
-base = declarative_base()
+Base = declarative_base()
