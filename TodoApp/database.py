@@ -5,12 +5,11 @@ from sqlalchemy.ext.declarative import declarative_base
 # Define the database URL
 # 'sqlite:///' -> This specifies that we are using SQLite as the database
 # './todos.db' -> This means the database file named 'todos.db' will be created in the current directory
-SQLALCHEMY_DATABASE_URL = 'sqlite:///./todosapp.db'
+SQLALCHEMY_DATABASE_URL = 'postgresql://postgres:pramodyasahan@localhost/TodoApplicationDatabase'
 
 # Create a database engine that allows our Python program to connect and interact with the database
 engine = create_engine(
     SQLALCHEMY_DATABASE_URL,  # Use the database URL we defined above
-    connect_args={'check_same_thread': False}  # This allows multiple parts of the program to access the database
 )
 
 # Create a session factory for database interactions
